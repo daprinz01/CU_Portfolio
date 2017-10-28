@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="_Layout.master.cs" Inherits="CU_Portfolio._Layout" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Codev Uni | <%: Page.Title %></title>
+
+    <!-- Bootstrap -->
+    <link href="Theme/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="Theme/Site.css" rel="stylesheet" />
+    <!-- Modernizr to remove the endign file extension-->
+    <script src="Scripts/modernizr-2.8.3.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.aspx">Codev Profile</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="index.aspx">Profile <span class="sr-only">(current)</span></a></li>
+                            <li><a href="DetailsPage.aspx">Details</a></li>
+                        </ul>
+                        
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="Contact.aspx">Contact me</a></li>   
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+    <form id="form1" runat="server">
+        <div>
+            
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+    <script src="Scripts/respond.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <footer>
+        <div class="container">
+            <strong>Tutorials @ Codev University</strong>
+            <label class="pull-right">Copyright @ Codev University 2017</label>
+        </div>
+    </footer>
+</body>
+</html>
